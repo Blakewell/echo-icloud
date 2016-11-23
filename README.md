@@ -8,7 +8,7 @@ All commands begin with "Alexa, ask *iCloud*...".  *iCloud* is the name that I c
 
 ### Find your phone
 
-*Find my iPhone
-*Find my phone
-*Where is my iPhone?
-*Where is my phone?
+* Find my iPhone
+* Find my phone
+* Where is my iPhone?
+* Where is my phone?

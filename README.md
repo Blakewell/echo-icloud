@@ -2,7 +2,7 @@
 
 This is a project in its beginning stages to connect the iCloud to Amazon Echo (Alexa)
 
-#Usage
+##Usage
 
 All commands begin with "Alexa, ask *iCloud*...".  *iCloud* is the name that I chose when creating my Alexa skill, but you can name it something to your liking.    
 

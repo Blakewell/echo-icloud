@@ -10,10 +10,10 @@ A config.json file needs to be placed inside of the zip file before uploading to
 {
     "devices": [
         {
-            "name": "YourName",
-	    "userName": "YourITunesEmailAddress",
-	    "password": "YourITunesPassword",
-	    "deviceIdx": "0"
+		"name": "YourName",
+		"userName": "YourITunesEmailAddress",
+		"password": "YourITunesPassword",
+		"deviceIdx": "0"
         }
     ]
 }

@@ -25,11 +25,8 @@ All commands begin with "Alexa, ask *iCloud*...".  *iCloud* is the name that I c
 
 Amazon has provided a good walk-through on getting started with [developing an Alexa Skill as a Lambda Function](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function).  This will be the technique we use for this integration.
 
-1.  Create a Lambda function using the [AWS Lambda Console]("https://console.aws.amazon.com/lambda")
-2. Select Python 2.7 as the language and pick the Alexa blueprint (we'll be overridding it with our own code)
-3. Specify a name (I used echo-icloud).  Accept all defaults but be sure to set up an appropriate security role (mine was called lambda_basic_execution)
-4. Download the zip file of the code from this repository (for simplicity I've created a [deployment.zip](https://github.com/Blakewell/echo-icloud/blob/master/install/deployment.zip) file).
-5. Add a file called config.json that contains your account credentials.  The file should look like this:
+* Download the zip file of the code from this repository (for simplicity I've created a [deployment.zip](https://github.com/Blakewell/echo-icloud/blob/master/install/deployment.zip) file).
+* Add a file called config.json that contains your account credentials.  The file should look like this:
 
 ```javascript
 {
@@ -44,6 +41,11 @@ Amazon has provided a good walk-through on getting started with [developing an A
 }
 ```
 
-6. Load the zip file to AWS and test out your function.
+* Create a Lambda function using the [AWS Lambda Console]("https://console.aws.amazon.com/lambda")
+* Select Python 2.7 as the language and pick the Alexa blueprint (we'll be overridding it with our own code)
+* Specify a name (I used echo-icloud).  Accept all defaults but be sure to set up an appropriate security role (mine was called lambda_basic_execution)
+* Go to the **Code** tab and select *Upload a .ZIP file* in the **Code entry type** dropdown 
+* Upload the *deployment.zip* file you modified earlier.  
+* Test the function with the test script available here.  
 
 

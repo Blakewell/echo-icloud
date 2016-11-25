@@ -55,7 +55,6 @@ six-1.10.0.dist-info/
 six.py
 six.pyc
 socketserver/
-tests/
 _thread/
 tkinter/
 tzlocal/

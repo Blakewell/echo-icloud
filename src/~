@@ -1,0 +1,10 @@
+{
+    "devices": [
+        {
+            "name": "Blake",
+	    "userName": "blakewell@gmail.com",
+	    "password": "1heartEden",
+	    "deviceIdx": "1"
+        }
+    ]
+}

@@ -1,14 +1,19 @@
+import json
+from pyicloud import PyiCloudService
+
 class ICloudHelper:
 
-	device = 'Blake'
+	iPhone = None
+	iCloudApi = None
 
 	def findMyPhone(self):
-		return 'Hello' + self.device
+		self.iPhone.play_sound()
 
 	def __init__(self):
-		self.device = "Kacee"
+		with open('config.json') as config_file:
+			config = json.load(config_file)
 
+		defaultDevice = config["devices"][0] 
 
-
-
-	
+		self.iCloudApi = PyiCloudService(defaultDevice["userName"],defaultDevice["password"])
+		self.iPhone = self.iCloudApi.devices[int(defaultDevice["deviceIdx"])]

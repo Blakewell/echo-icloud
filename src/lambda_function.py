@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-from pyicloud import PyiCloudService
+from icloud_helper import ICloudHelper 
 
 # --------------- Helpers that build all of the responses ----------------------
 def build_speechlet_response(title, output, reprompt_text, should_end_session):
@@ -62,6 +62,9 @@ def handle_session_end_request():
 def find_phone():
     card_title = "Find iPhone Triggered"
     speech_output = "Attempting to find your phone"
+	
+    helper = ICloudHelper()
+    helper.findMyPhone()
 
     return build_response({}, build_speechlet_response(
         card_title, speech_output, None, True))

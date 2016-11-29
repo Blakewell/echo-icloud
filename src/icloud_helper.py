@@ -3,17 +3,25 @@ from pyicloud import PyiCloudService
 
 class ICloudHelper:
 
-	iPhone = None
-	iCloudApi = None
+	config = None
 
-	def findMyPhone(self):
-		self.iPhone.play_sound()
+	def getDevice(self, name): 
+		
+		deviceConfig = self.config["devices"][0];	
+
+		for device in self.config["devices"]: 
+			if device["name"].lower() == name.lower():
+				deviceConfig = device
+				break
+
+		iCloudApi = PyiCloudService(deviceConfig["userName"],deviceConfig["password"])
+		return iCloudApi.devices[int(deviceConfig["deviceIdx"])]
+
+	def findMyPhone(self, name):
+		device = self.getDevice(name)
+		device.play_sound()
 
 	def __init__(self):
 		with open('config.json') as config_file:
-			config = json.load(config_file)
+			self.config = json.load(config_file)
 
-		defaultDevice = config["devices"][0] 
-
-		self.iCloudApi = PyiCloudService(defaultDevice["userName"],defaultDevice["password"])
-		self.iPhone = self.iCloudApi.devices[int(defaultDevice["deviceIdx"])]

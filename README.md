@@ -16,7 +16,7 @@ All commands begin with "Alexa, ask *iCloud*...".  *iCloud* is the name that I c
 ## How it works
 
 1. When you say the command to Alexa, it triggers the Alexa skill with invocation name iCloud
-2. The Alexa skill calls a Python service running on AWS Lambda
+2. The Alexa skill calls a Python service running an AWS Lambda function
 3. AWS Lambda then calls iCloud using the popular [pyicloud](https://github.com/picklepete/pyicloud) library
 
 ## Setup 
